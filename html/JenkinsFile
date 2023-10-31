@@ -1,0 +1,14 @@
+pipeline{
+    agent any
+    environment{
+        staging_server = "13.235.242.139"
+    }
+
+    stages{
+        stage('Deploy to remote'){
+            steps{
+                sh 'scp -r ${WORKSPACE}/* root@${staging_server}:/var/wwww/html/jenkinsdemo/'
+            }
+        }
+    }
+}

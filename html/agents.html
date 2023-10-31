@@ -1,0 +1,509 @@
+<html>
+	<head>
+		<style type="text/css">
+			#back{
+				position: fixed;
+				top: 0;
+				right: 0;
+				width: 100%;
+				height: 100%;
+			}
+			.list{
+				display: inline-block;
+				position: absolute;
+				margin-top: 0px;
+				margin-left: 29px;
+				width: 200px;
+				color: #f2f2f2;
+				background-color: rgba(0, 0, 0, 0);
+				text-align: left;
+				font-size: 100px;
+				font-family: Impact, Charcoal, sans-serif;
+			}
+			.list ul li:hover{
+				cursor: pointer;
+			}a
+			.list ul li{
+				margin-bottom: 0px;
+			}
+			#agents{
+				display: none;
+				position: fixed;
+				top: 60;
+				right: 0;
+				width: 75%;
+			}
+			#Omen:hover{
+				animation-name: ListAnim;
+				animation-duration: 0.6s;
+				font-size: 120px;
+			}
+			#Jett:hover{
+				animation-name: ListAnim;
+				animation-duration: 0.6s;
+				font-size: 120px;
+			}
+			#Raze:hover{
+				animation-name: ListAnim;
+				animation-duration: 0.6s;
+				font-size: 120px;
+			}
+			#Skye:hover{
+				animation-name: ListAnim;
+				animation-duration: 0.6s;
+				font-size: 120px;
+			}
+			#Brimstone:hover{
+				animation-name: ListAnim;
+				animation-duration: 0.6s;
+				font-size: 120px;
+			}
+			#Phoenix:hover{
+				animation-name: ListAnim;
+				animation-duration: 0.6s;
+				font-size: 120px;
+			}
+			#Sage:hover{
+				animation-name: ListAnim;
+				animation-duration: 0.6s;
+				font-size: 120px;
+			}
+			#Sova:hover{
+				animation-name: ListAnim;
+				animation-duration: 0.6s;
+				font-size: 120px;
+			}
+			#Viper:hover{
+				animation-name: ListAnim;
+				animation-duration: 0.6s;
+				font-size: 120px;
+			}
+			#Cypher:hover{
+				animation-name: ListAnim;
+				animation-duration: 0.6s;
+				font-size: 120px;
+			}
+			#Reyna:hover{
+				animation-name: ListAnim;
+				animation-duration: 0.6s;
+				font-size: 120px;
+			}
+			#Killjoy:hover{
+				animation-name: ListAnim;
+				animation-duration: 0.6s;
+				font-size: 120px;
+			}
+			#Breach:hover{
+				animation-name: ListAnim;
+				animation-duration: 0.6s;
+				font-size: 120px;
+			}
+			.navbar {
+			  background-color: rgba(0, 0, 0, 0.7);
+			  position: fixed;
+			  top: 0;
+			  right:0;
+			  width: 100%;
+			  padding-top: 10px;
+			  
+			}
+			.navbar a {
+			  font-size: 25px;
+			  float: left;
+			  display: inline-block;
+			  color: #f2f2f2;
+			  text-align: center;
+			  padding: 14px 30px;
+			  text-decoration: none;
+			  font-family: Tahoma, Geneva, sans-serif;
+			}
+			ul{
+				list-style-type: none;
+			}
+			
+			.Game-InfoList{
+				display: none;
+				position: fixed;
+				margin-top: 80px;
+				margin-left: 170px;
+				width: 150px;
+				color: #f2f2f2;
+				background-color: rgba(0, 0, 0, 0.6);
+				text-align: left;
+				font-weight: 900;
+				font-size: 17px;
+				font-family: Tahoma, Geneva, sans-serif;
+			}
+			.Game-InfoList li{
+				padding-bottom: 10px;
+			}
+			.Game-InfoList li a{
+				text-decoration: none;
+				color: #f2f2f2;
+			}
+
+			@keyframes ListAnim{
+				from{
+					font-size: 100px;
+				}
+				to{
+					font-size: 120px;
+				}
+			}
+			::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px blue;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(20, 47, 57);
+  border-radius: 10px;
+}
+
+.glow-on-hover {
+    width: 100px;
+    height: 40px;
+    text-decoration: none;
+    font-size: 16px;
+    border: none;
+    margin-top: 1%;
+    margin-left: 1%;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: absolute;
+    z-index: 0;
+    border-radius: 10px;
+    opacity: 0.7;
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: white;
+    text-decoration: none;
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: black;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+		</style>
+	</head>
+	<body>
+		
+		<img src="../images/valorantagentsback.jpeg" alt="trulli" id="back">
+		<img src="../images/valorantagentsback.jpeg" id="agents">
+		<div class="list">
+			<ul style="list-style-type: none;">
+				<li id="Omen">OMEN</li>
+				<li id="Jett">JETT</li>
+				<li id="Raze">RAZE</li>
+				<li id="Skye">SKYE</li>
+				<li id="Brimstone">BRIMSTONE</li>
+				<li id="Phoenix">PHOENIX</li>
+				<li id="Sage">SAGE</li>
+				<li id="Sova">SOVA</li>
+				<li id="Viper">VIPER</li>
+				<li id="Cypher">CYPHER</li>
+				<li id="Reyna">REYNA</li>
+				<li id="Killjoy">KILLJOY</li>
+				<li id="Breach">BREACH</li>
+			</ul>
+		</div>
+		
+	</body>
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$("#Omen").click(function(){
+				$("#agents").css('display','block');
+				$("#agents").attr("src","../images/omen.png");
+				$("#Omen").css('color','white');
+				$("#Jett").css('color','white');
+				$("#Raze").css('color','white');
+				$("#Skye").css('color','white');
+				$("#Brimstone").css('color','white');
+				$("#Phoenix").css('color','white');
+				$("#Sage").css('color','white');
+				$("#Sova").css('color','white');
+				$("#Viper").css('color','white');
+				$("#Cypher").css('color','white');
+				$("#Reyna").css('color','white');
+				$("#Killjoy").css('color','white');
+				$("#Breach").css('color','white');
+				$(this).css('color','red');
+			})
+			$("#Jett").click(function(){
+				$("#agents").attr("src","../images/jett.png");
+				$("#agents").css('display','block');
+				$("#Omen").css('color','white');
+				$("#Jett").css('color','white');
+				$("#Raze").css('color','white');
+				$("#Skye").css('color','white');
+				$("#Brimstone").css('color','white');
+				$("#Phoenix").css('color','white');
+				$("#Sage").css('color','white');
+				$("#Sova").css('color','white');
+				$("#Viper").css('color','white');
+				$("#Cypher").css('color','white');
+				$("#Reyna").css('color','white');
+				$("#Killjoy").css('color','white');
+				$("#Breach").css('color','white');
+				$(this).css('color','red');
+			})
+			$("#Raze").click(function(){
+				$("#agents").attr("src","../images/raze.png");
+				$("#agents").css('display','block');
+				$("#Omen").css('color','white');
+				$("#Jett").css('color','white');
+				$("#Raze").css('color','white');
+				$("#Skye").css('color','white');
+				$("#Brimstone").css('color','white');
+				$("#Phoenix").css('color','white');
+				$("#Sage").css('color','white');
+				$("#Sova").css('color','white');
+				$("#Viper").css('color','white');
+				$("#Cypher").css('color','white');
+				$("#Reyna").css('color','white');
+				$("#Killjoy").css('color','white');
+				$("#Breach").css('color','white');
+				$(this).css('color','red');
+			})
+			$("#Skye").click(function(){
+				$("#agents").attr("src","../images/skye.png");
+				$("#agents").css('display','block');
+				$("#Omen").css('color','white');
+				$("#Jett").css('color','white');
+				$("#Raze").css('color','white');
+				$("#Skye").css('color','white');
+				$("#Brimstone").css('color','white');
+				$("#Phoenix").css('color','white');
+				$("#Sage").css('color','white');
+				$("#Sova").css('color','white');
+				$("#Viper").css('color','white');
+				$("#Cypher").css('color','white');
+				$("#Reyna").css('color','white');
+				$("#Killjoy").css('color','white');
+				$("#Breach").css('color','white');
+				$(this).css('color','red');
+			})
+			$("#Brimstone").click(function(){
+				$("#agents").attr("src","../images/brimstone.png");
+				$("#agents").css('display','block');
+				$("#Omen").css('color','white');
+				$("#Jett").css('color','white');
+				$("#Raze").css('color','white');
+				$("#Skye").css('color','white');
+				$("#Brimstone").css('color','white');
+				$("#Phoenix").css('color','white');
+				$("#Sage").css('color','white');
+				$("#Sova").css('color','white');
+				$("#Viper").css('color','white');
+				$("#Cypher").css('color','white');
+				$("#Reyna").css('color','white');
+				$("#Killjoy").css('color','white');
+				$("#Breach").css('color','white');
+				$(this).css('color','red');
+			})
+			$("#Phoenix").click(function(){
+				$("#agents").attr("src","../images/phoenix.png");
+				$("#agents").css('display','block');
+				$("#Omen").css('color','white');
+				$("#Jett").css('color','white');
+				$("#Raze").css('color','white');
+				$("#Skye").css('color','white');
+				$("#Brimstone").css('color','white');
+				$("#Phoenix").css('color','white');
+				$("#Sage").css('color','white');
+				$("#Sova").css('color','white');
+				$("#Viper").css('color','white');
+				$("#Cypher").css('color','white');
+				$("#Reyna").css('color','white');
+				$("#Killjoy").css('color','white');
+				$("#Breach").css('color','white');
+				$(this).css('color','red');
+			})
+			$("#Sage").click(function(){
+				$("#agents").attr("src","../images/sage.png");
+				$("#agents").css('display','block');
+				$("#Omen").css('color','white');
+				$("#Jett").css('color','white');
+				$("#Raze").css('color','white');
+				$("#Skye").css('color','white');
+				$("#Brimstone").css('color','white');
+				$("#Phoenix").css('color','white');
+				$("#Sage").css('color','white');
+				$("#Sova").css('color','white');
+				$("#Viper").css('color','white');
+				$("#Cypher").css('color','white');
+				$("#Reyna").css('color','white');
+				$("#Killjoy").css('color','white');
+				$("#Breach").css('color','white');
+				$(this).css('color','red');
+			})
+			$("#Sova").click(function(){
+				$("#agents").attr("src","../images/sova.png");
+				$("#agents").css('display','block');
+				$("#Omen").css('color','white');
+				$("#Jett").css('color','white');
+				$("#Raze").css('color','white');
+				$("#Skye").css('color','white');
+				$("#Brimstone").css('color','white');
+				$("#Phoenix").css('color','white');
+				$("#Sage").css('color','white');
+				$("#Sova").css('color','white');
+				$("#Viper").css('color','white');
+				$("#Cypher").css('color','white');
+				$("#Reyna").css('color','white');
+				$("#Killjoy").css('color','white');
+				$("#Breach").css('color','white');
+				$(this).css('color','red');
+			})
+			$("#Viper").click(function(){
+				$("#agents").attr("src","../images/viper.png");
+				$("#agents").css('display','block');
+				$("#Omen").css('color','white');
+				$("#Jett").css('color','white');
+				$("#Raze").css('color','white');
+				$("#Skye").css('color','white');
+				$("#Brimstone").css('color','white');
+				$("#Phoenix").css('color','white');
+				$("#Sage").css('color','white');
+				$("#Sova").css('color','white');
+				$("#Viper").css('color','white');
+				$("#Cypher").css('color','white');
+				$("#Reyna").css('color','white');
+				$("#Killjoy").css('color','white');
+				$("#Breach").css('color','white');
+				$(this).css('color','red');
+			})
+			$("#Cypher").click(function(){
+				$("#agents").attr("src","../images/cypher.png");
+				$("#agents").css('display','block');
+				$("#Omen").css('color','white');
+				$("#Jett").css('color','white');
+				$("#Raze").css('color','white');
+				$("#Skye").css('color','white');
+				$("#Brimstone").css('color','white');
+				$("#Phoenix").css('color','white');
+				$("#Sage").css('color','white');
+				$("#Sova").css('color','white');
+				$("#Viper").css('color','white');
+				$("#Cypher").css('color','white');
+				$("#Reyna").css('color','white');
+				$("#Killjoy").css('color','white');
+				$("#Breach").css('color','white');
+				$(this).css('color','red');
+			})
+			$("#Reyna").click(function(){
+				$("#agents").attr("src","../images/reyna.png");
+				$("#agents").css('display','block');
+				$("#Omen").css('color','white');
+				$("#Jett").css('color','white');
+				$("#Raze").css('color','white');
+				$("#Skye").css('color','white');
+				$("#Brimstone").css('color','white');
+				$("#Phoenix").css('color','white');
+				$("#Sage").css('color','white');
+				$("#Sova").css('color','white');
+				$("#Viper").css('color','white');
+				$("#Cypher").css('color','white');
+				$("#Reyna").css('color','white');
+				$("#Killjoy").css('color','white');
+				$("#Breach").css('color','white');
+				$(this).css('color','red');
+			})
+			$("#Killjoy").click(function(){
+				$("#agents").attr("src","../images/killjoy.png");
+				$("#agents").css('display','block');
+				$("#Omen").css('color','white');
+				$("#Jett").css('color','white');
+				$("#Raze").css('color','white');
+				$("#Skye").css('color','white');
+				$("#Brimstone").css('color','white');
+				$("#Phoenix").css('color','white');
+				$("#Sage").css('color','white');
+				$("#Sova").css('color','white');
+				$("#Viper").css('color','white');
+				$("#Cypher").css('color','white');
+				$("#Reyna").css('color','white');
+				$("#Killjoy").css('color','white');
+				$("#Breach").css('color','white');
+				$(this).css('color','red');
+			})
+			$("#Breach").click(function(){
+				$("#agents").attr("src","../images/breach.png");
+				$("#agents").css('display','block');
+				$("#Omen").css('color','white');
+				$("#Jett").css('color','white');
+				$("#Raze").css('color','white');
+				$("#Skye").css('color','white');
+				$("#Brimstone").css('color','white');
+				$("#Phoenix").css('color','white');
+				$("#Sage").css('color','white');
+				$("#Sova").css('color','white');
+				$("#Viper").css('color','white');
+				$("#Cypher").css('color','white');
+				$("#Reyna").css('color','white');
+				$("#Killjoy").css('color','white');
+				$("#Breach").css('color','white');
+				$(this).css('color','red');
+			})
+		})
+	</script>
+	<script src="https://kit.fontawesome.com/c33f999b97.js" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+	<script>
+		$(document).ready(function(){
+  			$("#gameinfo").hover(function(){
+    			$(".Game-InfoList").slideDown("slow");
+  				$(".Game-InfoList").mouseleave(function(){
+  				$(this).slideUp("slow");
+  			});
+  			});
+		});
+	</script>
+	<button class="glow-on-hover" type="button"><a href="../html/main.php"><i class="fa fa-chevron-left"></i></a></button>
+</html>

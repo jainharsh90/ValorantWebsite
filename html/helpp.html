@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		#panel{display: none;}
+		#panel1{display: none;}
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script> 
+		$(document).ready(function(){
+			$("#flip").click(function(){
+				$("#panel").slideToggle("slow");
+			});
+			$("#flip1").click(function(){
+				$("#panel1").slideToggle("slow");
+			});
+			$("#flip2").click(function(){
+				$("#panel2").slideToggle("slow");
+			});
+		});
+	</script>
+	<title>Help</title>
+	<link rel="stylesheet" type="text/css" href="../css/helpp.css">
+</head>
+<body>
+<button class="glow-on-hover" type="button"><a href="../html/main.php"><i class="fa fa-chevron-left"></i></a></button>
+<script src="https://kit.fontawesome.com/c33f999b97.js" crossorigin="anonymous"></script>
+	<header>
+		<div class="des">
+			<h1>Frequently Asked Questions</h1>
+			<div id="flip">
+		    <h3>What is Valorant?</h3>
+			</div>
+			<div class="enh">
+				<div id="panel" class="help01">
+						<ul type="none">
+							<li>Valorant is a free-to-play first-person shooter game.</li>
+							<li>It provides various agents to play with, on variety on different maps.</li>
+							<li>There are various game modes where players can compete with each other.</li>
+						</ul>
+				</div>
+			</div>
+		    <div id="flip1">
+		    <h3>Latest Update</h3>
+			</div>
+			<div class="enh">	
+				<div id="panel1" class="help02">
+					<ul type="none">
+						<li>This update brings the new Act in place. This update launches a new map in the game.</li>
+						<li>Omen agent has been updated. Fixed an issue where Omen's Dark Cover could travel in unintended ways</li>
+						<li>Ascent map has been fixated. Various bugs for different agents are been removed.</li>	
+					</ul>
+				</div>
+			</div>
+			<div id="flip2">
+		    <h3>More information on update</h3>
+			</div>
+			<div class="enh">
+				<div id="panel2" class="help03">
+						<ul type="none">
+							<li>For detailed information on new update, visit <b><a href="https://playvalorant.com/en-gb/">Valorant.com</a></b>.</li>
+						</ul>
+				</div>
+			</div>
+			
+		</div>
+	</header>
+	<script type="text/javascript">
+    (function(d, m){
+        var kommunicateSettings = 
+            {"appId":"3f0d84c29c27d815311b1cec13a58d945","popupWidget":true,"automaticChatOpenOnNavigation":true};
+        var s = document.createElement("script"); s.type = "text/javascript"; s.async = true;
+        s.src = "https://widget.kommunicate.io/v2/kommunicate.app";
+        var h = document.getElementsByTagName("head")[0]; h.appendChild(s);
+        window.kommunicate = m; m._globals = kommunicateSettings;
+    })(document, window.kommunicate || {});
+/* NOTE : Use web server to view HTML files as real-time update will not work if you directly open the HTML file in the browser. */
+</script>
+</body>
+</html>

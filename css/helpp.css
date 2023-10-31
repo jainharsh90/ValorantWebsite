@@ -1,0 +1,180 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	font-family: Century Gothic;
+
+}
+header{
+	background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(../images/help.jpg);
+	background-repeat: repeat;
+	height: 100vh;
+	font-family: Century Gothic;
+	background-size: cover;
+
+}
+.des{
+	text-align: left;
+	margin-top: 3px;
+	color: white;
+	padding: 20px;
+	font-family: Century Gothic;
+	float: top;
+
+}
+.enh{
+	text-align: left;
+	margin-top: 5px;
+	color: white;
+	font-family: Century Gothic;
+	float: top;
+	font-size: 15px;
+	color: white;
+}
+
+.help01{
+	margin-left: 20px;
+	font-family: Century Gothic;
+
+}
+.help02{
+	margin-left: 20px;
+	font-family: Century Gothic;
+
+}
+.help03{
+	margin-left: 20px;
+	font-family: Century Gothic;
+
+}
+h3{
+	text-decoration: underline;
+	font-family: Century Gothic;
+	padding-top: 20px;
+	margin-top: 8px;
+	font-size: 25px;
+}
+h1{
+	font-size: 50px;
+	color: white;
+	text-align: center;
+}
+
+.home{
+	padding: 5px;
+	position: absolute;
+	font-size: 20px;
+	text-decoration: none;
+	margin-top: 15px;
+	color: #fff;
+	size: 15px;
+	margin-left: 20px;
+	transition: 0.2s ease;
+}
+.home:hover{
+	border: 1px solid #000;
+	border-radius: 10%;
+	background-color: #fff;
+	color: #000;
+}
+
+.enh:hover{
+	cursor: default;
+}
+
+a:link{
+	text-decoration: none;
+	color: white;
+}
+
+a:visited{
+	text-decoration: none;
+	color: white;
+}
+
+a:hover{
+	text-decoration: none;
+	color: white;
+}
+
+a:active{
+	text-decoration: none;
+	color: white;
+}
+
+.glow-on-hover {
+    width: 100px;
+    height: 40px;
+    text-decoration: none;
+    font-size: 16px;
+    border: none;
+    margin-top: 2%;
+    margin-left: 1%;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: absolute;
+    z-index: 0;
+    border-radius: 10px;
+    opacity: 0.7;
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: white;
+    text-decoration: none;
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: black;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+#panel1 {
+  display: none;
+}
+
+#panel {
+  display: none;
+}
+
+#panel2 {
+  display: none;
+}

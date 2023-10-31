@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Valorant Gun Details</title>
+  <link rel = "icon" href =  "../images/icon.png" type = "image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+*{
+  margin: 0;
+  padding: 0;
+  font-family: Century Gothic;
+}
+body{
+  background-image:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(../images/val2.jpg);
+  background-attachment: fixed;
+  background-position: center;
+}
+.mySlides {
+  position: absolute;
+  display:none;
+  margin-left: 42%;
+  margin-top: 8%;
+  border-radius: 50px;
+
+}
+.display-left{
+  position: absolute;
+  border-radius: 10px;
+  margin-left: 42%;
+  margin-top: 20%;
+  font-size: 35px;
+  width: 2%;
+  opacity: 0.1;
+}
+.display-left:hover{
+  opacity: 0.4;
+}
+.display-right{
+  position: absolute;
+  border-radius: 10px;
+  margin-left: 95%;
+  margin-top: 20%;
+  font-size: 35px;
+  width: 2%;
+  opacity: 0.1;
+}
+.display-right:hover{
+  opacity: 0.4;
+}
+a:link {
+  color: white;
+}
+a:visited {
+  color: white;
+}
+a:hover {
+  color: white;
+}
+a:active {
+  color: white;
+}
+.head h5{
+  position: absolute;
+  background-image: linear-gradient(to left, red, pink, red, pink, red, pink, red);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  top: 8%;
+  right: 72%;
+  font-size: 60px;
+}
+.head h6{
+  position: absolute;
+  color: white;
+  top: 19%;
+  left: 4%;
+  right: 62%;
+  font-size: 18px;
+}
+.head h4{
+  position: absolute;
+  color: white;
+  top: 75%;
+  left: 4%;
+  font-size: 20px;
+}
+.glow-on-hover {
+    width: 100px;
+    height: 40px;
+    text-decoration: none;
+    font-size: 16px;
+    border: none;
+    margin-top: 1%;
+    margin-left: 1%;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: absolute;
+    z-index: 0;
+    border-radius: 10px;
+    opacity: 0.7;
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: white;
+    text-decoration: none;
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: black;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+</style>
+</head>
+<body>
+<div class="display-container">
+  <img class="mySlides" src="../images/skins/ion.png" style="width:55%; height: 60%" >
+  <img class="mySlides" src="../images/skins/elderflame.jpg" style="width:55%; height: 60%">
+  <img class="mySlides" src="../images/skins/reaver.jpg" style="width:55%; height: 60%">
+  <img class="mySlides" src="../images/skins/Spline.jpg" style="width:55%; height: 60%">
+  <img class="mySlides" src="../images/skins/ruin.jpg" style="width:55%; height: 60%">
+    <img class="mySlides" src="../images/skins/singularity.jpg" style="width:55%; height: 60%">
+</div>
+  <button class="display-left" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="display-right" onclick="plusDivs(1)">&#10095;</button>
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
+<span class="head">
+    <h5>Weapons</h5>
+    <h6>Agents have different variations of weapons, typically firearms, to cater to specific playstyles or metas. Weapons are separated by two categories, Sidearms and Primary weapons. Sidearms consists of handguns used for close-quarters. Primaries include SMGs and Shotguns that are used for close-quarters, Snipers for long range, and Rifles and Heavy light machine guns to accommodate for both close and long range.Weapons can be purchased by Agents using creds during the pre-round sequence. Each Agent is equipped with a Knife and the Classic sidearm for free by default. <br><br>Agents will keep the weapons they purchase through each round until they die. Weapons can also be picked up off the ground from deceased players, both friendly and hostile, which will carry on with the player into the next round. Also, the weapon you carry from a deceased player be it teammate or hostile, if the weapon has any skin applied to it than you will also get the weapon with applied skin and all animations. Even if you have bought the skin pack or no, the skin will still stay </h6>  <h4><br><br><br> To know more about the weapons(Damage, Magazine, Penetration, etc) follow the link here, <a href="https://www.metabomb.net/valorant/gameplay-guides/valorant-guns-guide">Weapon Info</a></h4>
+  </span>
+  <button class="glow-on-hover" type="button"><a href="../html/main.php"><i class="fa fa-chevron-left"></i></a></button>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<?php
+session_start();
+if (isset($_SESSION['username']))
+{
+    $con = mysqli_connect("sql212.iceiy.com","icei_29797031","jain1234","icei_29797031_register");
+    $resultb = mysqli_query($con, "SELECT * FROM login WHERE username = '$username' && password = '$password'");
+    $rowb = mysqli_fetch_array($resultb,MYSQLI_ASSOC);
+    $username = $rowb['username'];
+}
+
+?>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Valorant Gamer's Guide</title>
+	<link rel="stylesheet" type="text/css" href="../css/main.css">
+	<link rel="stylesheet" type="text/css" href="../css/signup.css">
+ 	<link rel = "icon" href =  "../images/icon.png" type = "image/x-icon">
+ 	<script src="jquery.min.js"></script>
+	
+</head>
+<body>
+	<header>
+		<div class="main">
+			<ul>
+				<li><a href="agents.html"><b>Agents</b></a></li>
+				<li><a href="map.html"><b>Maps</b></a></li>
+				<li><a href="weapons.html"><b>Weapons</b></a></li>
+				<li><a href="games.html"><b>Games</b></a></li>
+				<li><a href="helpp.html"><b>Help</b></a></li>
+                
+			</ul>
+		</div>
+        <div class="slide-toggle">
+        <ul>
+            <li><b>Welcome, <?php echo $_SESSION["name"]."!!  " ?> </b></li>
+            <li><a href="../html/index.php"><b>Logout</b></a></li>   
+        </ul>
+        </div>
+		<div class="title">
+			<img src="../images/gamers.jpg" height="350px" width="700px" ></img>
+			<h1>Welcome to </span></h1>
+			<h6>VALORANT is a free-to-play multiplayer tactical first-person shooter developed and published by Riot Games, for Microsoft Windows. First teased under the codename Project A in October 2019, the game began a closed beta period with limited access on April 7, 2020, followed by official release on June 2, 2020. Valorant is a team-based tactical shooter and first-person shooter set in the near-future. Players play as one of a set of agents, characters designed based on several countries and cultures around the world. In the main game mode, players are assigned to either the attacking or defending team with each team having five players on it. Agents have unique abilities, each requiring charges, as well as a unique ultimate ability which requires charging through kills, deaths, or spike actions. Every player starts each round with a "classic" pistol and one or more "signature ability" charge. Other weapons and ability charges can be purchased using an in game economic system which awards money based on the outcome of the previous round, any kills the player is responsible for, and any actions taken with the spike. The game has an assortment of weapons including sidearms, submachine guns, shotguns, machine guns, assault rifles and sniper rifles. There are automatic and semi-automatic weapons that have a shooting pattern which has to be controlled by the player in order to be able to shoot accurately.<br><br></h6>
+		</div>
+		<div class="footer">
+			<h2>Updates:</h2>
+				<marquee class="fast">
+					<h6>The new patch update 1.8 will be released soon. As the new update rolls out, a new agent will be released in the game with unique abilities.</h6>
+				</marquee>
+		</div>
+        </form>
+	</header>
+</body>
+</html>
